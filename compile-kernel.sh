@@ -25,5 +25,4 @@ sed -ir 's/^CONFIG_X86_PAE=/# CONFIG_X86_PAE is not set/' .config
 make olddefconfig
 
 make-kpkg -j `nproc --all` --initrd --append-to-version=-non-pae kernel-image
-cp -ax ../*.deb /vagrant/
 
