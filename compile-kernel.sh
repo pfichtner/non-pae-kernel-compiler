@@ -8,7 +8,7 @@ FULLVERSION=`find /boot/ -name "config-*" -printf "%f\n" | sort | tail -1 | cut 
 VERSION=`echo $FULLVERSION | cut -d'-' -f1`
 
 cd /usr/src
-tar xf linux-source-$VERSION.tar.bz2
+tar xpvf linux-source-$VERSION.tar.bz2
 
 cd linux-source-$VERSION
 cp -ax /boot/config-$FULLVERSION .config
