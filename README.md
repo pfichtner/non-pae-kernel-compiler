@@ -9,6 +9,8 @@ $ TMPDIR=tmp packer build -var-file=ubuntu1610-i386.json -var 'update=true' -var
 $ cd ..
 $ vagrant box add devbox packer/box/virtualbox/ubuntu1610-kernelcompiler-i386-0.1.0.box
 $ vagrant up
+$ vagrant ssh -c "sudo sh /vagrant/compile-kernel.sh"
+$ vagrant ssh -c "sudo mv /usr/src/*.deb /vagrant/"
 ``` 
 
 Why not Docker? Because it needs to compile a i386 (32 bit) kernel and should not depend on the execution environment (X86_64, MacOS, ...)
