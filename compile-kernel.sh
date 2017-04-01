@@ -2,7 +2,7 @@
 
 apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
-DEBIAN_FRONTEND=noninteractive apt-get install -y ncurses-dev libssl-dev build-essential linux-source kernel-package 
+DEBIAN_FRONTEND=noninteractive apt-get install -y ncurses-dev libssl-dev build-essential kernel-package linux-source
 
 FULLVERSION=`find /boot/ -name "config-*" -printf "%f\n" | sort | tail -1 | cut -d'-' -f2-`
 VERSION=`echo $FULLVERSION | cut -d'-' -f1`
