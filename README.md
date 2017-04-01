@@ -10,6 +10,7 @@ $ cd ..
 $ vagrant up
 $ vagrant ssh -c "sudo sh /vagrant/compile-kernel.sh"
 $ vagrant ssh -c "sudo mv /usr/src/*.deb /vagrant/"
+$ vagrant destroy
 ``` 
 
 Why not Docker? Because it needs to compile a i386 (32 bit) kernel and should not depend on the execution environment (X86_64, MacOS, ...)
