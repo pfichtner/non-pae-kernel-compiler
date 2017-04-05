@@ -8,8 +8,8 @@ $ mkdir tmp
 $ TMPDIR=tmp packer build -var-file=ubuntu1610-i386.json -var 'update=true' -var 'headless=true' -var 'vm_name=ubuntu1610-kernelcompiler-i386' -var 'custom_script=../install-kernel-build-environment.sh' -var "ssh_wait_timeout=2h" -only=virtualbox-iso ubuntu.json
 $ cd ..
 $ vagrant up
-$ vagrant ssh -c "sudo sh /vagrant/compile-kernel.sh"
-$ vagrant ssh -c "sudo mv /usr/src/*.deb /vagrant/"
+$ vagrant ssh -c "sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove"
+$ vagrant ssh -c "sudo sh /vagrant/compile-kernel.sh && sudo mv /usr/src/*.deb /vagrant/"
 $ vagrant destroy
 ``` 
 
