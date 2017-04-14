@@ -1,4 +1,3 @@
 [submodule "packer"]
 	path = packer
 	url = https://github.com/pfichtner/ubuntu.git
-	branch = kernel-compiler
